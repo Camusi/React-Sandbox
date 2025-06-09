@@ -1,22 +1,27 @@
 .home {
-    background-color: #fff9e6;
     min-height: 100vh;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     color: #333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 .island-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 3rem;
     flex-wrap: wrap;
+    padding: 5rem 5rem 40rem;
+    border-radius: 3rem;
+    background-size: cover;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
 }
 
 .island-card {
-    background: white;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
     text-decoration: none;
@@ -24,7 +29,11 @@
     width: 20%;
     padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(to bottom right, #fff9e6, white);
+    background: linear-gradient(
+            to bottom right,
+            rgba(255, 249, 230, 0.95),
+            rgba(255, 255, 255, 0.95)
+    );
 }
 
 .island-card:hover {
@@ -57,6 +66,7 @@
     width: 320px;
     height: 80px;
     text-align: center;
+    cursor: pointer;
 }
 
 .coin-button.pressed {
@@ -76,8 +86,6 @@
     transform: translateX(-50%);
     font-size: 1.8rem;
     animation: flyUpFade 1.5s ease forwards;
-    pointer-events: none;
-    user-select: none;
 }
 
 

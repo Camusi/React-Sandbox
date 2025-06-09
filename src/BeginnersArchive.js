@@ -1,4 +1,5 @@
 import './styles/BeginnersArchive.css';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 const user = {
@@ -46,7 +47,7 @@ export default function BeginnersArchive() {
 }
 
 // 🔹 Button component
-function MyButton({ clicked, setClicked }) {
+function MyButton({clicked, setClicked}) {
     const [buttonClicks, setButtonClicks] = useState(0);
 
     function handleClick() {
@@ -62,3 +63,7 @@ function MyButton({ clicked, setClicked }) {
         </button>
     );
 }
+MyButton.propTypes = {
+    clicked: PropTypes.bool,
+    setClicked: PropTypes.func
+};

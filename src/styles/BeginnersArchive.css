@@ -1,6 +1,7 @@
 .main {
     display: flex;
     justify-content: center;
+    min-height: 91.5vh;
 }
 
 /* Button */
