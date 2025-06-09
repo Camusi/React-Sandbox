@@ -1,0 +1,93 @@
+.home {
+    background-color: #fff9e6;
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.island-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.island-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    width: 20%;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to bottom right, #fff9e6, white);
+}
+
+.island-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+}
+
+.island-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.island-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.island-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+.coin-button-container {
+    position: relative;
+    margin: 3rem auto;
+    width: 320px;
+    height: 80px;
+    text-align: center;
+}
+
+.coin-button.pressed {
+    background: linear-gradient(145deg, #cc0000, #ff3333);
+    box-shadow:
+            inset 4px 4px 8px #990000,
+            inset -4px -4px 8px #ff6666;
+    transform: translateY(4px);
+}
+
+.coin-emoji {
+    position: absolute;
+    font-weight: bold;
+    color: darkgoldenrod;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    animation: flyUpFade 1.5s ease forwards;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+@keyframes flyUpFade {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-120px) scale(1.4);
+    }
+}

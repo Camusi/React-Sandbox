@@ -1,0 +1,48 @@
+nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    z-index: 10;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #61dafb;
+}
+
+.logo {
+    width: 100%;
+}
+
+.logo-box {
+    background: rgba(255, 255, 255, 0.8);
+    width: 5%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.15);
+}
+
+.link-box {
+    display: flex;
+    gap: 2rem;
+}
+
+.gold-display {
+    font-weight: 700;
+    color: #b8860b;
+    user-select: none;
+}
