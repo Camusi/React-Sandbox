@@ -1,6 +1,6 @@
 # Home Page Preview
 
-![image](https://github.com/user-attachments/assets/413068fb-fa66-4409-87e7-0ada5add1bdc)
+![image](https://github.com/user-attachments/assets/88677327-3e15-4a52-8c78-2957de25310e)
 
 This is the homepage of a React-based web app that includes features such as a coin store, multipliers, and navigation across different game-related pages. Built for a fun and interactive user experience with a clean, responsive layout.
 
