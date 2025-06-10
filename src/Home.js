@@ -13,26 +13,29 @@ import buttonDown from './resources/button-down.png';
 export default function Home({setGold, multiplier}) {
     return (
         <div className="home">
-            <h1>Sammy Sandbox</h1>
+
             <div className="island-container" style={{ backgroundImage: `url(${beach_img})` }}>
-                <IslandCard
-                    title="Stacked Donuts"
-                    img={donuts_img}
-                    description="Explore my obsession."
-                    link="/beach"
-                />
-                <IslandCard
-                    title="Luxury Couches"
-                    img={couch_img}
-                    description="Get pranked because they are not real."
-                    link="/forest"
-                />
-                <IslandCard
-                    title="Majestic Mountains"
-                    img={bush_img}
-                    description="Walk valleys and enjoy breathtaking views."
-                    link="/mountain"
-                />
+                <h1>Sammy Sandbox</h1>
+                <div className="islands-grid">
+                    <IslandCard
+                        title="Stacked Donuts"
+                        img={donuts_img}
+                        description="Explore my obsession."
+                        link="/beach"
+                    />
+                    <IslandCard
+                        title="Luxury Couches"
+                        img={couch_img}
+                        description="Get pranked because they are not real."
+                        link="/forest"
+                    />
+                    <IslandCard
+                        title="Majestic Mountains"
+                        img={bush_img}
+                        description="Walk valleys and enjoy breathtaking views."
+                        link="/mountain"
+                    />
+                </div>
             </div>
 
             <CoinButton setGold={setGold} multiplier={multiplier} />

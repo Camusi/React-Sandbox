@@ -6,14 +6,17 @@ import PropTypes from "prop-types";
 export default function NavBar({ gold, secretUnlocked, multiplier }) {
     return (
         <nav>
-            <div className="logo-box">
-                <img src={logo} alt="logo-black" className="logo"/>
+            <div className="logo-box glass-btn">
+                <Link to="/">
+                    <img src={logo} alt="logo-black" className="logo"/>
+                </Link>
             </div>
+
             <div className="link-box">
-                <Link to="/">Home</Link>
-                <Link to="/beginners-archive">Beginners Archive</Link>
-                <Link to="/store">Store</Link>
-                {secretUnlocked && <Link to="/secret-page">Secret Page</Link>}
+                <Link to="/" className="glass-btn">Home</Link>
+                <Link to="/beginners-archive" className="glass-btn">Beginners Archive</Link>
+                <Link to="/store" className="glass-btn">Store</Link>
+                {secretUnlocked && <Link to="/secret-page" className="glass-btn">Secret Page</Link>}
             </div>
             <div className="gold-display">
                 Gold: <span>{gold}</span> 🪙<br />

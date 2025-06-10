@@ -58,9 +58,22 @@ function MyButton({clicked, setClicked}) {
     const buttonText = clicked ? `Thanks x${buttonClicks}` : 'Click me!';
 
     return (
-        <button className="test_button" onClick={handleClick}>
-            {buttonText}
-        </button>
+        <>
+            <div className="glass-btn-wrap">
+                <button onClick={handleClick} className="glass-btn">
+                    <span>{buttonText}</span>
+                </button>
+                <div className="glass-btn-shadow"></div>
+            </div>
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
+                style={{position: "absolute", width: "100%", height: "100%", zIndex: "0"}}
+            >
+            </svg>
+        </>
     );
 }
 MyButton.propTypes = {

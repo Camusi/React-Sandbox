@@ -47,9 +47,8 @@ export default function Store({ gold, setGold, setMultiplier, setSecretUnlocked 
 
     return (
         <div className="store-page">
-            <h1>Store</h1>
-
             <section className="multipliers" style={{ backgroundImage: `url(${sunset_img})` }}>
+                <h1>Store</h1>
                 <h2>Multipliers</h2>
                 <div className="store-grid">
                     {multipliers.map(item => (
@@ -60,6 +59,7 @@ export default function Store({ gold, setGold, setMultiplier, setSecretUnlocked 
                             <button
                                 onClick={() => handlePurchase(item)}
                                 disabled={itemsBought[item.id]}
+                                className="glass-btn"
                             >
                                 {itemsBought[item.id] ? "Sold" : "Buy"}
                             </button>
@@ -80,6 +80,7 @@ export default function Store({ gold, setGold, setMultiplier, setSecretUnlocked 
                             <button
                                 onClick={() => handlePurchase(item)}
                                 disabled={itemsBought[item.id]}
+                                className="glass-btn"
                             >
                                 {itemsBought[item.id] ? "Sold" : "Buy"}
                             </button>
@@ -87,6 +88,17 @@ export default function Store({ gold, setGold, setMultiplier, setSecretUnlocked 
                     ))}
                 </div>
             </section>
+
+            <button
+                onClick={() => {
+                    setItemsBought({});
+                    localStorage.removeItem('itemsBought');
+                }}
+                className="glass-btn reset-btn"
+            >
+                Reset Store
+            </button>
+
 
             {error && <p className="store-error">{error}</p>}
         </div>
